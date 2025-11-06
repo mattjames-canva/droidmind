@@ -68,7 +68,7 @@ async def screenshot(serial: str, ctx: Context, quality: int = 75) -> Image:
             await ctx.info(
                 f"Screenshot converted successfully: {png_size:.1f}KB → {jpg_size:.1f}KB ({reduction:.1f}% reduction)"
             )
-            return Image(data=jpeg_data, format="jpeg")
+            return Image(data=jpeg_data, format="jpg")
         except UnidentifiedImageError:
             # If we can't parse the image data, return it as-is
             logger.warning("Could not identify image data, returning unprocessed")
