@@ -10,6 +10,5 @@ from mcp.server.fastmcp import FastMCP
 # Create the MCP server with lifespan
 mcp = FastMCP(
     "DroidMind",
-    description="Control Android devices with MCP",
     dependencies=["rich>=13.9.4"],
 )
